@@ -1,0 +1,75 @@
+// Updated Theme Color Variables
+$night-sky-color: #2f045e;
+$sunset-color: #c56e29;
+$aurora-color: #5ac6d8;
+$aurora-active-color: #4eb8b0;
+$night-sky-active-color: #7a4bff;
+$sunset-active-color: #ff9f42;
+
+.container-icons {
+  display: inline-flex;
+  flex-direction: row;
+  border-radius: 16px;
+  width: auto;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 10;
+}
+
+.container-icons.night-sky {
+  border: 2px solid $night-sky-color;
+}
+
+.container-icons.sunset {
+  border: 2px solid $sunset-color;
+}
+
+.container-icons.night-aurora-boreal {
+  border: 2px solid $aurora-color;
+}
+
+.icon {
+  padding: 4px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icon.night-sky {
+  color: $night-sky-color;
+}
+
+.icon.sunset {
+  color: $sunset-color;
+}
+
+.icon.night-aurora-boreal {
+  color: $aurora-color;
+}
+
+.icon.night-sky.active {
+  color: $night-sky-active-color;
+}
+
+.icon.sunset.active {
+  color: $sunset-active-color;
+}
+
+.icon.night-aurora-boreal.active {
+  color: $aurora-active-color;
+}
+
+.icon:nth-child(2).night-sky {
+  border-right: 1px solid $night-sky-color;
+  border-left: 1px solid $night-sky-color;
+}
+
+.icon:nth-child(2).sunset {
+  border-right: 1px solid $sunset-color;
+  border-left: 1px solid $sunset-color;
+}
+
+.icon:nth-child(2).night-aurora-boreal {
+  border-right: 1px solid $aurora-color;
+  border-left: 1px solid $aurora-color;
+}

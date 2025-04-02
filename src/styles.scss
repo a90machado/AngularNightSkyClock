@@ -56,14 +56,14 @@
     bottom: -80px;
     left: 10vw;
     width: 80vw;
-    height: 100px;
+    height: 70px;
     border-radius: 50%;
     box-shadow:
-      -0px -10px 30px 10px #ffc1a0,
-      -0px -20px 40px 20px #fe9c7f,
-      -0px -30px 60px 30px #be6590,
-      -0px -50px 150px 75px #632b6c;
-    background-color: #ffc1a0;
+      -0px -10px 30px 10px #e6b8a0,
+      -0px -20px 40px 20px #ff9f7f,
+      -0px -30px 60px 30px #be6f90,
+      -0px -50px 150px 75px #5e3b6c;
+    background-color: #e6b8a0;
     z-index: 1;
   }
 
@@ -72,14 +72,14 @@
     bottom: -80px;
     left: 10vw;
     width: 80vw;
-    height: 100px;
+    height: 70px;
     border-radius: 50%;
     box-shadow:
-      -0px -10px 30px 10px #ff8c42,   /* Orange glow */
-      -0px -20px 40px 20px #fe6a3b,   /* Soft reddish-orange glow */
-      -0px -30px 60px 30px #f45643,   /* Deeper red */
-      -0px -50px 150px 75px #b33c3c;  /* Darker red for more depth */
-    background-color: #ff8c42;        /* Warm orange base color */
+      -0px -10px 30px 10px #d97b3f,
+      -0px -20px 40px 20px #c96b49,
+      -0px -30px 60px 30px #9f5341,
+      -0px -50px 150px 75px #6e3523;
+    background-color: #d97b3f;
     z-index: 1;
   }
 
@@ -88,16 +88,18 @@
     bottom: -80px;
     left: 10vw;
     width: 80vw;
-    height: 100px;
+    height: 70px;
     border-radius: 50%;
     box-shadow:
-      -0px -10px 30px 10px #5ac6d8,   /* Light blueish glow */
-      -0px -20px 40px 20px #53a1c3,   /* Medium blueish glow */
-      -0px -30px 60px 30px #7a82b3,   /* Soft purple/blueish glow */
-      -0px -50px 150px 75px #1a4578;  /* Deep dark blue for more depth */
-    background-color: #5ac6d8;        /* Light blue base color */
+      -0px -10px 30px 10px #6ec6e8,
+      -0px -20px 40px 20px #54a1c4,
+      -0px -30px 60px 30px #7482c4,
+      -0px -50px 150px 75px #2e427a;
+    background-color: #6ec6e8;
     z-index: 1;
   }
+
+
 
   #stars {
     position: absolute;
@@ -275,27 +277,27 @@
 #sky.sunset {
   background: -moz-linear-gradient(
       to bottom,
-      #3e0f27 0%,
-      #5f1f3a 25%,
-      #7c2a56 50%,
-      #a84d7a 75%,
-      #d94d32 100%
+      #2b0a1b 0%,
+      #4c142d 25%,
+      #6f1d3e 50%,
+      #8b2a47 75%,
+      #b53a2f 100%
   );
   background: -webkit-linear-gradient(
       to bottom,
-      #3e0f27 0%,
-      #5f1f3a 25%,
-      #7c2a56 50%,
-      #a84d7a 75%,
-      #d94d32 100%
+      #2b0a1b 0%,
+      #4c142d 25%,
+      #6f1d3e 50%,
+      #8b2a47 75%,
+      #b53a2f 100%
   );
   background: linear-gradient(
       to bottom,
-      #3e0f27 0%,
-      #5f1f3a 25%,
-      #7c2a56 50%,
-      #a84d7a 75%,
-      #d94d32 100%
+      #2b0a1b 0%,
+      #4c142d 25%,
+      #6f1d3e 50%,
+      #8b2a47 75%,
+      #b53a2f 100%
   );
 }
 

@@ -1,0 +1,6 @@
+<div class="container-icons" [ngClass]="theme()">
+  <span class="material-icons icon"
+        [ngClass]="getIconClass(icon.icon)"
+        *ngFor="let icon of iconsTheme"
+        (click)="changeTheme(icon)">{{ icon.icon }}</span>
+</div>

@@ -1,4 +1,4 @@
-import {Component, input, InputSignal, OnInit, signal, WritableSignal} from '@angular/core';
+import {Component, input, InputSignal, OnChanges, OnInit, signal, SimpleChanges, WritableSignal} from '@angular/core';
 import {Theme} from '../../enums/theme.enum';
 import {Star} from '../../models/star.model';
 
@@ -7,7 +7,7 @@ import {Star} from '../../models/star.model';
   templateUrl: './star-field.component.html',
   styleUrl: './star-field.component.scss'
 })
-export class StarFieldComponent implements OnInit {
+export class StarFieldComponent implements OnInit, OnChanges {
   public theme: InputSignal<Theme> = input.required<Theme>();
   public stars: WritableSignal<Star[]> = signal([]);
   private maxStars: number = 2000;
@@ -15,12 +15,18 @@ export class StarFieldComponent implements OnInit {
 
   private themeColors: Record<Theme, string[]> = {
     [Theme.Night]: ['#FFFFFF', '#B0C4DE', '#C0C0C0', '#A9A9A9', '#708090'],
-    [Theme.Sunset]: ['#FFD700', '#FF4500', '#DC143C', '#FF6347', '#FFA07A'],
+    [Theme.Sunset]: ['#FF6347', '#8B0000', '#800000', '#DC143C', '#B22222'],
     [Theme.Aurora]: ['#00FF7F', '#7FFFD4', '#4682B4', '#6A5ACD', '#DA70D6']
   };
 
   public ngOnInit(): void {
     this.generateStars();
+  }
+
+  public ngOnChanges(changes: SimpleChanges): void {
+    if (changes['theme']) {
+      this.generateStars();
+    }
   }
 
   private generateStars(): void {

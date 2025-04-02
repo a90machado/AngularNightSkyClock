@@ -1,4 +1,5 @@
 <div id="sky" [ngClass]="theme()">
+  <app-button-toggle-theme [theme]="theme()" (toggleTheme)="changeTheme($event)" />
   <div id="mountain-base"></div>
   <div id="light-base" [ngClass]="theme()"></div>
   <app-star-field [theme]="theme()" />
