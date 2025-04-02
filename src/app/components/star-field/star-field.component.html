@@ -1,0 +1,13 @@
+<div id="stars">
+  <div
+    *ngFor="let star of stars()"
+    class="star"
+    [ngClass]="star.size"
+    [ngStyle]="{
+      top: star.top + '%',
+      left: star.left + '%',
+      animationDuration: star.duration + 's',
+      backgroundColor: star.color
+    }"
+  ></div>
+</div>

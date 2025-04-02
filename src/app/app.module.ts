@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import {AppComponent} from './app.component';
 import {RouterOutlet} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
+import {StarFieldComponent} from './components/star-field/star-field.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    StarFieldComponent,  ],
   imports: [
     CommonModule,
     BrowserModule,

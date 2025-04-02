@@ -1,1 +1,301 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+#sky {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #060010;
+  transform: scale(1);
+
+  #mountain-base {
+    background: linear-gradient(
+        to bottom,
+        rgba(55, 5, 105, 0) 0%,
+        rgba(9, 0, 22, 1) 100%
+    );
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: -10px;
+    z-index: 3;
+  }
+
+  #mountain-base:after {
+    content: "";
+    background: linear-gradient(
+        to bottom,
+        rgba(55, 5, 105, 0) 0%,
+        rgba(9, 0, 22, 1) 100%
+    );
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+  }
+
+  #mountain-base:before {
+    content: "";
+
+    background: linear-gradient(
+        to bottom,
+        rgba(55, 5, 105, 0) 0%,
+        rgba(9, 0, 22, 1) 100%
+    );
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+  }
+
+  #light-base.night-sky {
+    position: absolute;
+    bottom: -80px;
+    left: 10vw;
+    width: 80vw;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow:
+      -0px -10px 30px 10px #ffc1a0,
+      -0px -20px 40px 20px #fe9c7f,
+      -0px -30px 60px 30px #be6590,
+      -0px -50px 150px 75px #632b6c;
+    background-color: #ffc1a0;
+    z-index: 1;
+  }
+
+  #light-base.sunset {
+    position: absolute;
+    bottom: -80px;
+    left: 10vw;
+    width: 80vw;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow:
+      -0px -10px 30px 10px #ff8c42,   /* Orange glow */
+      -0px -20px 40px 20px #fe6a3b,   /* Soft reddish-orange glow */
+      -0px -30px 60px 30px #f45643,   /* Deeper red */
+      -0px -50px 150px 75px #b33c3c;  /* Darker red for more depth */
+    background-color: #ff8c42;        /* Warm orange base color */
+    z-index: 1;
+  }
+
+  #light-base.night-aurora-boreal {
+    position: absolute;
+    bottom: -80px;
+    left: 10vw;
+    width: 80vw;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow:
+      -0px -10px 30px 10px #5ac6d8,   /* Light blueish glow */
+      -0px -20px 40px 20px #53a1c3,   /* Medium blueish glow */
+      -0px -30px 60px 30px #7a82b3,   /* Soft purple/blueish glow */
+      -0px -50px 150px 75px #1a4578;  /* Deep dark blue for more depth */
+    background-color: #5ac6d8;        /* Light blue base color */
+    z-index: 1;
+  }
+
+  #stars {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200vw;
+    height: 200vh;
+    overflow: hidden;
+    animation: rotateStars 1000s linear infinite;
+  }
+
+  @keyframes rotateStars {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+    opacity: 0.8;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+  }
+
+  .star-0 {
+    height: 0.5px;
+    width: 0.5px;
+    animation: twinkle 1.5s ease-in-out infinite;
+  }
+
+  .star-1 {
+    height: 1px;
+    width: 1px;
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .star-2 {
+    height: 1.5px;
+    width: 1.5px;
+    animation: twinkle 2.5s ease-in-out infinite;
+  }
+
+  .star-3 {
+    height: 2px;
+    width: 2px;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .star-4 {
+    height: 2.5px;
+    width: 2.5px;
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.5);
+    animation: twinkle 4s ease-in-out infinite;
+  }
+
+  .star-5 {
+    height: 2.5px;
+    width: 2.5px;
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.7);
+    animation: twinkle 5s ease-in-out infinite;
+  }
+}
+
+#sky.night-sky {
+  background: -moz-linear-gradient(
+      to top,
+      #060010 0%,
+      #060010 6%,
+      #090016 11%,
+      #070016 20%,
+      #0a0121 48%,
+      #0a0127 55%,
+      #0a0129 57%,
+      #0c012b 62%,
+      #0e0131 68%,
+      #0d012f 69%,
+      #18023c 78%,
+      #19023e 79%,
+      #1c0242 81%,
+      #22034b 85%,
+      #2e045a 92%,
+      #2f045e 96%,
+      #340464 98%,
+      #370569 100%
+  );
+  background: -webkit-linear-gradient(
+      to top,
+      #060010 0%,
+      #060010 6%,
+      #090016 11%,
+      #070016 20%,
+      #0a0121 48%,
+      #0a0127 55%,
+      #0a0129 57%,
+      #0c012b 62%,
+      #0e0131 68%,
+      #0d012f 69%,
+      #18023c 78%,
+      #19023e 79%,
+      #1c0242 81%,
+      #22034b 85%,
+      #2e045a 92%,
+      #2f045e 96%,
+      #340464 98%,
+      #370569 100%
+  );
+  background: linear-gradient(
+      to bottom,
+      #060010 0%,
+      #060010 6%,
+      #090016 11%,
+      #070016 20%,
+      #0a0121 48%,
+      #0a0127 55%,
+      #0a0129 57%,
+      #0c012b 62%,
+      #0e0131 68%,
+      #0d012f 69%,
+      #18023c 78%,
+      #19023e 79%,
+      #1c0242 81%,
+      #22034b 85%,
+      #2e045a 92%,
+      #2f045e 96%,
+      #340464 98%,
+      #370569 100%
+  );
+}
+
+#sky.night-aurora-boreal {
+  background: -moz-linear-gradient(
+      to top,
+      #1a3a3f 0%,
+      #2b5d58 25%,
+      #3d7f76 50%,
+      #4f9b87 75%,
+      #6abf9e 100%
+  );
+  background: -webkit-linear-gradient(
+      to top,
+      #1a3a3f 0%,
+      #2b5d58 25%,
+      #3d7f76 50%,
+      #4f9b87 75%,
+      #6abf9e 100%
+  );
+  background: linear-gradient(
+      to bottom,
+      #1a3a3f 0%,
+      #2b5d58 25%,
+      #3d7f76 50%,
+      #4f9b87 75%,
+      #6abf9e 100%
+  );
+}
+
+#sky.sunset {
+  background: -moz-linear-gradient(
+      to bottom,
+      #3e0f27 0%,
+      #5f1f3a 25%,
+      #7c2a56 50%,
+      #a84d7a 75%,
+      #d94d32 100%
+  );
+  background: -webkit-linear-gradient(
+      to bottom,
+      #3e0f27 0%,
+      #5f1f3a 25%,
+      #7c2a56 50%,
+      #a84d7a 75%,
+      #d94d32 100%
+  );
+  background: linear-gradient(
+      to bottom,
+      #3e0f27 0%,
+      #5f1f3a 25%,
+      #7c2a56 50%,
+      #a84d7a 75%,
+      #d94d32 100%
+  );
+}
+

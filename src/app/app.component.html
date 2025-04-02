@@ -1,17 +1,5 @@
-<div id="sky" class="night-sky">
+<div id="sky" [ngClass]="theme()">
   <div id="mountain-base"></div>
-  <div id="light-base" class="night-sky"></div>
-  <div id="stars">
-    <div
-      *ngFor="let star of stars()"
-      class="star"
-      [ngClass]="star.size"
-      [ngStyle]="{
-      top: star.top + '%',
-      left: star.left + '%',
-      animationDuration: star.duration + 's',
-      backgroundColor: star.color
-    }"
-    ></div>
-  </div>
+  <div id="light-base" [ngClass]="theme()"></div>
+  <app-star-field [theme]="theme()" />
 </div>
