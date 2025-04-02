@@ -1,6 +1,7 @@
 <div id="sky" [ngClass]="theme()">
   <app-button-toggle-theme [theme]="theme()" (toggleTheme)="changeTheme($event)" />
   <div id="mountain-base"></div>
+  <img src="assets/images/city_background.png" alt="City Skyline" id="background-city" />
   <div id="light-base" [ngClass]="theme()"></div>
   <app-star-field [theme]="theme()" />
 </div>

@@ -53,52 +53,74 @@
 
   #light-base.night-sky {
     position: absolute;
-    bottom: -80px;
-    left: 10vw;
-    width: 80vw;
-    height: 70px;
+    bottom: -40px;
+    left: 0;
+    width: 100vw;
+    height: 100px;
     border-radius: 50%;
+    background: linear-gradient(to top, rgba(142, 90, 168, 0.8), rgba(9, 0, 22, 0.5));
     box-shadow:
-      -0px -10px 30px 10px #e6b8a0,
-      -0px -20px 40px 20px #ff9f7f,
-      -0px -30px 60px 30px #be6f90,
-      -0px -50px 150px 75px #5e3b6c;
-    background-color: #e6b8a0;
+      0px -10px 40px 15px rgba(180, 133, 196, 0.5),
+      0px -20px 50px 25px rgba(124, 79, 148, 0.4),
+      0px -30px 70px 35px rgba(79, 46, 102, 0.3);
+    animation: pulsate 3s infinite alternate;
     z-index: 1;
   }
 
   #light-base.sunset {
     position: absolute;
-    bottom: -80px;
-    left: 10vw;
-    width: 80vw;
-    height: 70px;
+    bottom: -40px;
+    left: 0;
+    width: 100vw;
+    height: 100px;
     border-radius: 50%;
+    background: linear-gradient(to top, rgba(200, 97, 42, 0.8), rgba(123, 43, 27, 0.4));
     box-shadow:
-      -0px -10px 30px 10px #d97b3f,
-      -0px -20px 40px 20px #c96b49,
-      -0px -30px 60px 30px #9f5341,
-      -0px -50px 150px 75px #6e3523;
-    background-color: #d97b3f;
+      0px -10px 40px 15px rgba(255, 115, 45, 0.6),
+      0px -20px 50px 25px rgba(180, 80, 56, 0.5),
+      0px -30px 70px 35px rgba(90, 36, 25, 0.3);
+    animation: pulsate 3s infinite alternate;
     z-index: 1;
   }
 
   #light-base.night-aurora-boreal {
     position: absolute;
-    bottom: -80px;
-    left: 10vw;
-    width: 80vw;
-    height: 70px;
+    bottom: -40px;
+    left: 0;
+    width: 100vw;
+    height: 100px;
     border-radius: 50%;
+    background: linear-gradient(to top, rgba(74, 170, 194, 0.8), rgba(28, 52, 90, 0.5));
     box-shadow:
-      -0px -10px 30px 10px #6ec6e8,
-      -0px -20px 40px 20px #54a1c4,
-      -0px -30px 60px 30px #7482c4,
-      -0px -50px 150px 75px #2e427a;
-    background-color: #6ec6e8;
+      0px -10px 40px 15px rgba(92, 181, 204, 0.6),
+      0px -20px 50px 25px rgba(58, 135, 161, 0.5),
+      0px -30px 70px 35px rgba(28, 52, 90, 0.4);
+    animation: pulsate 3s infinite alternate, auroraEffect 5s linear infinite;
     z-index: 1;
   }
 
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  @keyframes auroraEffect {
+    0% {
+      background: rgba(74, 170, 194, 0.8);
+    }
+    50% {
+      background: rgba(92, 181, 204, 0.7);
+    }
+    100% {
+      background: rgba(74, 170, 194, 0.8);
+    }
+  }
 
 
   #stars {
@@ -178,6 +200,15 @@
     width: 2.5px;
     box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.7);
     animation: twinkle 5s ease-in-out infinite;
+  }
+
+  #background-city {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto; /* Adjust based on the SVG height */
+    z-index: 2;
   }
 }
 

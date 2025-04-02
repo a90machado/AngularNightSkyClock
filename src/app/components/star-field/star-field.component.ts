@@ -34,7 +34,7 @@ export class StarFieldComponent implements OnInit, OnChanges {
     const validStars: Star[] = [];
     const colors: string[] = this.themeColors[this.theme()]; // Get colors based on theme
 
-    const getRandomDistance = (): number => this.getRandomInt(0.5, 5);
+    const getRandomDistance = (): number => this.getRandomInt(0.1, 0.5);
 
     const isTooClose = (newStar: Star, stars: Star[]): boolean => {
       return stars.some((star: Star): boolean => {
