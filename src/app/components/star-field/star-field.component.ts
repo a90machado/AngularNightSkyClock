@@ -73,12 +73,6 @@ export class StarFieldComponent implements OnInit, OnChanges {
     this.stars.set(validStars);
   }
 
-  public changeTheme(newTheme: Theme): void {
-    if (this.themeColors[newTheme]) {
-      this.generateStars();
-    }
-  }
-
   private getRandomInt(min: number, max: number): number {
     return Math.random() * (max - min) + min;
   }
