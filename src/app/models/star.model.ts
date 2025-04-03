@@ -4,4 +4,6 @@ export interface Star {
   duration: number;
   size: string;
   color: string;
+  endLeft?: number;
+  endTop?: number;
 }

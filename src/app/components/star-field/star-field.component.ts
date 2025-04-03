@@ -1,11 +1,11 @@
-import {Component, input, InputSignal, OnChanges, OnInit, signal, SimpleChanges, WritableSignal} from '@angular/core';
-import {Theme} from '../../enums/theme.enum';
-import {Star} from '../../models/star.model';
+import { Component, input, InputSignal, OnChanges, OnInit, signal, SimpleChanges, WritableSignal } from '@angular/core';
+import { Theme } from '../../enums/theme.enum';
+import { Star } from '../../models/star.model';
 
 @Component({
   selector: 'app-star-field',
   templateUrl: './star-field.component.html',
-  styleUrl: './star-field.component.scss'
+  styleUrls: ['./star-field.component.scss']
 })
 export class StarFieldComponent implements OnInit, OnChanges {
   public theme: InputSignal<Theme> = input.required<Theme>();
@@ -55,7 +55,7 @@ export class StarFieldComponent implements OnInit, OnChanges {
           left: this.getRandomInt(0, 100),
           duration: this.getRandomInt(1, 3),
           size: starSizes[Math.floor(this.getRandomInt(0, starSizes.length))],
-          color: colors[Math.floor(this.getRandomInt(0, colors.length))]
+          color: colors[Math.floor(this.getRandomInt(0, colors.length))],
         };
 
         if (!isTooClose(newStar, validStars)) {
@@ -73,8 +73,8 @@ export class StarFieldComponent implements OnInit, OnChanges {
     this.stars.set(validStars);
   }
 
+
   private getRandomInt(min: number, max: number): number {
     return Math.random() * (max - min) + min;
   }
-
 }
